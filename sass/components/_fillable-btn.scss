@@ -1,0 +1,19 @@
+.fillable-btn {
+
+    text-align: center;
+    vertical-align: middle;
+    border: solid 2px black;
+    min-width: 5rem;
+    padding: 1rem;
+    border: solid 0.2rem $main-color;
+    width: max-content;
+    color: $main-font-color;
+    background: linear-gradient(to right, $main-color 50%, $main-background-color 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease;
+
+    &:hover {
+        background-position: left bottom;
+    }   
+}

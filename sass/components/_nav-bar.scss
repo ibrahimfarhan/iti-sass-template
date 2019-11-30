@@ -1,0 +1,10 @@
+// TODO: Handle overflow when the last item contains a drop-down list.
+
+.nav-bar {
+    display: flex;
+    width: max-content;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    margin-right: 3rem;
+}

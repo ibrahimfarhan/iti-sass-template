@@ -1,0 +1,26 @@
+.movable-icon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 2 * $icon-font-size;
+    min-height: 2 * $icon-font-size;
+    width: max-content;
+    @include color-bg-color($main-font-color, $main-background-color);
+    transition: transform 0.3s $animation-timing-func;
+    text-align: center;
+    border: solid 0.2rem $main-color;
+    border-radius: 50%; 
+
+    &:hover {
+        transform: translateY(-0.3rem);
+    }
+
+    &:hover &__icon {
+        color: $main-color;
+    }
+
+    &__icon {
+        font-size: $icon-font-size;
+    }
+}

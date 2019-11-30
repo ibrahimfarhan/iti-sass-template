@@ -1,0 +1,47 @@
+.card {
+    height: $card-height;
+    width: $card-width;
+    background-color: $black;
+    transition: background-color 0.3s linear;
+    color: $main-font-color;
+    padding: 1rem 2rem;
+
+    &:hover {
+        background-color: $main-color;
+
+        .fa-chart-pie {
+            color: white;
+        }
+
+        .card__hr {
+            color: white;
+        }
+    }
+
+    .fa-chart-pie {
+        color: white;
+    }
+
+    &__icon-wrapper {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    &__hr {
+        color: $main-color;
+        transition: color 0.3s linear;
+    }
+
+    &__hr-container {
+        width: 2rem;
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    &__para {
+        line-height: 1.5rem;
+    }
+}

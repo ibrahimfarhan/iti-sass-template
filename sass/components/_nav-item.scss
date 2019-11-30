@@ -1,0 +1,57 @@
+.nav-item {
+
+    height: 2.1rem;
+    padding: 1rem;
+    width: max-content;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    @include clickable-div;
+
+    &--dark {
+        @include color-bg-color($main-font-color, $main-background-color);
+    }
+
+    &--light {
+        @include color-bg-color($black, $white)
+    }
+
+    &--drop-down {
+        position: relative;
+        z-index: 2;
+
+        &__list {
+            position: absolute;
+            visibility: hidden;
+            background-color: $main-background-color;
+        }
+
+        &:hover {
+            .nav-item--drop-down__list {
+                visibility: visible;
+            }
+        }
+    }
+
+    &:hover {
+        .nav-item__hr {
+            width: 1rem;
+            border-width: 0.1rem;
+            color: $main-color;
+        }
+    }
+
+    &__text {
+        margin-bottom: 0.3rem;
+    }
+
+    &__hr {
+        width: 0;
+        padding: 0;
+        color: $white;
+        transition: width, color 0.3s, 0.2s linear;
+        margin-left: 0;
+        margin-bottom: 0;
+        border-width: 0;
+    }
+}

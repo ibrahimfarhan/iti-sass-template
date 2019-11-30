@@ -1,0 +1,80 @@
+.text-container {
+    text-align: center;
+    width: 12rem;
+    padding: 1rem;
+
+    &--left-align {
+        text-align: left;
+    }
+
+    &--large {
+        width: 25rem;
+        min-height: 10rem;
+        line-height: 1.5rem;
+    }
+
+    &--light {
+        @include color-bg-color($gray, $white);
+
+        .text-container__title {
+            color: $black;
+        }
+    }
+
+    &--transparent {
+        @include color-bg-color($gray, transparent);
+    }
+
+    &--quote {
+        width: 40rem;
+        min-height: 10rem;
+        line-height: 2rem;
+        height: max-content;
+
+        &__subtitle, &__name {
+            font-size: 1rem;
+        }
+
+        &__subtitle {
+            color: $main-color;
+            margin-top: 0.6rem;
+        }
+
+        &__name {
+            color: $black;
+        }
+
+        .text-container__text {
+            font-size: 1.3rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .text-container__title {
+            font-size: 2.5rem;
+        }
+    }
+
+    &--dark {
+        @include color-bg-color($main-font-color, $black);
+    }
+
+    &--with-top-hr {
+        &__top-hr {
+            color: $main-color;
+            width: 2rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    &__text {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+}

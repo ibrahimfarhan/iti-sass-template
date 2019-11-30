@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include color-bg-color($main-font-color, $main-background-color);
+
+    &__header-logo {
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+
+    &__nav-bar {
+        margin-top: 1rem;
+    }
+}

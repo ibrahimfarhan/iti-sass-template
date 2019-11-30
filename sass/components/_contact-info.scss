@@ -1,0 +1,19 @@
+.contact-info {
+    width: max-content;
+    min-width: 2rem;
+    @include color-bg-color($main-font-color, $main-background-color);
+    padding: 1rem;
+    
+    &:hover {
+        color: $main-color;
+
+        .contact-info__first-line {
+            transition: color 0.6s $animation-timing-func;
+        }
+
+        .contact-info__second-line {
+            transition: color 0.6s $animation-timing-func;
+            transition-delay: 0.1s;
+        }
+    }
+}
