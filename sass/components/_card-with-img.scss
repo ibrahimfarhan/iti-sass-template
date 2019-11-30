@@ -28,7 +28,7 @@
     &--movable-text {
         &:hover {
             .card-with-img--movable-text__text {
-                transform: translate(-50%, -1rem);
+                transform: translate(-50%, -3rem);
             }
         }
 
@@ -54,6 +54,7 @@
             width: 100%;
             height: 100%;
             cursor: pointer;
+            z-index: 1;
         }
 
         &__icon {
@@ -88,5 +89,6 @@
     &__text {
         position: absolute;
         color: $white;
+        top: 55%;
     }
 }

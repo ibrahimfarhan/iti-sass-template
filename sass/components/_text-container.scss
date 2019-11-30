@@ -14,7 +14,7 @@
     }
 
     &--light {
-        @include color-bg-color($gray, $white);
+        @include color-bg-color(gray, $white);
 
         .text-container__title {
             color: $black;
@@ -22,7 +22,7 @@
     }
 
     &--transparent {
-        @include color-bg-color($gray, transparent);
+        @include color-bg-color(gray, transparent);
     }
 
     &--quote {

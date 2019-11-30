@@ -1,0 +1,13 @@
+.section-title {
+
+    &__title {
+        font-size: 3rem;
+        margin: 1rem 0 0 0;
+    }
+
+    &__subtitle {
+        font-size: 1.25rem;
+        color: $main-color;
+        margin: 0;
+    }
+}

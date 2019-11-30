@@ -1,0 +1,30 @@
+.about-section {
+
+    padding: 3rem;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__images {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__paragraph {
+        max-width: 50rem;
+        color: gray;
+    }
+
+    &__right-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__text {
+        margin-top: 3rem;
+    }
+}

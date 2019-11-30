@@ -1,0 +1,43 @@
+.main-section {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    background-position: right;
+    height: max-content;
+    align-items: left;
+    text-align: left;
+    padding: 3rem 3rem 0 3rem;
+    overflow: hidden;
+
+    &__hr {
+        width: 5rem;
+        height: 0.05rem;
+        color: $main-color;
+        background-color: $main-color;
+        margin: 0;
+    }
+
+    &__title {
+        @include color-bg-color($main-font-color, transparent);
+        width: max-content;
+        height: max-content;
+        font-size: 4.5rem;
+        max-width: 60%;
+        margin-top: 3rem;
+    }
+
+    &__btn {
+        margin-top: 2rem;
+        min-width: 10rem;
+    }
+
+    &__cards-wrapper {
+        width: 100%;
+        margin-top: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+}

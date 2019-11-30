@@ -1,0 +1,14 @@
+.paragraph-container {
+    max-width: 20rem;
+    width: max-content;
+    min-height: 15rem;
+    line-height: 1.5rem;
+
+    &__title {
+        color: black;
+    }
+
+    &__para {
+        color: gray;
+    }
+}

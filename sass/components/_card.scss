@@ -1,6 +1,9 @@
 .card {
-    height: $card-height;
-    width: $card-width;
+    height: max-content;
+    width: max-content;
+    max-width: $card-max-width;
+    min-width: $card-min-width;
+    min-height: $card-min-height;
     background-color: $black;
     transition: background-color 0.3s linear;
     color: $main-font-color;

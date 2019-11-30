@@ -1,0 +1,19 @@
+.section-separator {
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__line {
+
+        height: 3rem;
+        border-left: solid $main-color 0.15rem;
+        margin: 0 auto;
+        width: 0;
+        background-color: $white;
+    }
+
+    &--half-black {
+        background: linear-gradient(to bottom, $light-background-color 50%, $black 50%);
+    }
+}

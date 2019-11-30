@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     font-size: 1.5rem;
-    background-color: $white;
+    background-color: $gray;
 
     &:hover {
         background-color: $main-color;
@@ -23,7 +23,7 @@
 
     &__left-icon {
         position: absolute;
-        color: $white;
+        color: $gray;
         font-size: 2.5rem;
         transition: font-size 0.6s cubic-bezier(0.17, 0.67, 0, 1.01);
     }

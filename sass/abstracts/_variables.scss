@@ -4,17 +4,21 @@ $black: rgb(36, 35, 35);
 $main-background-color: black;
 $black-semi-transparent: rgba(36, 35, 35, 0.5);
 $white: rgb(241, 241, 241);
+$light-background-color: $white;
 $blue: rgb(84, 129, 196);
 $main-font-color: white;
-$gray: gray;
+$gray: rgb(224, 224, 224);
 
 // Dimensions
-$card-width: 25rem;
-$card-height: 18rem;
-$shrinkable-card-width: 30rem;
-$shrinkable-card-height: 30rem;
+$card-width: 27rem;
+$card-height: 16rem;
+$card-min-height: 22rem;
+$card-min-width: 20rem;
+$card-max-width: 15rem;
+$shrinkable-card-width: 27rem;
+$shrinkable-card-height: 27rem;
 $card-width-large: 48rem;
-$card-height-large: 38rem;
+$card-height-large: 35rem;
 $icon-font-size: 1.5rem;
 
 // Animations

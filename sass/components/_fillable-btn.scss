@@ -1,9 +1,9 @@
 .fillable-btn {
 
+    display: block;
     text-align: center;
-    vertical-align: middle;
     border: solid 2px black;
-    min-width: 5rem;
+    min-width: 7rem;
     padding: 1rem;
     border: solid 0.2rem $main-color;
     width: max-content;
@@ -11,9 +11,17 @@
     background: linear-gradient(to right, $main-color 50%, $main-background-color 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all 0.5s ease;
+    transition: all 0.5s $animation-timing-func;
+
+    &--light {
+        background: linear-gradient(to right, $main-color 50%, $light-background-color 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        color: black;
+    }
 
     &:hover {
         background-position: left bottom;
+        color: $main-font-color;
     }   
 }

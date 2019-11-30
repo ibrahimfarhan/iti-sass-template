@@ -1,5 +1,8 @@
 @import 'fillable-btn';
+@import 'styled-hr';
 @import 'text-container';
+@import 'paragraph-container';
+@import 'section-separator';
 @import 'centered-text';
 @import 'card';
 @import 'card-with-img';
@@ -11,4 +14,12 @@
 @import 'contact-info';
 @import 'footer-item';
 @import 'nav-bar';
-@import 'background-img';
+@import 'section-title';
+
+@import 'sections/main-section';
+@import 'sections/services-section';
+@import 'sections/works-section';
+@import 'sections/about-section';
+@import 'sections/clients-section';
+@import 'sections/news-section';
+@import 'sections/contact-section';

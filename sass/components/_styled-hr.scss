@@ -1,0 +1,15 @@
+.styled-hr {
+
+    width: 2rem;
+    color: $main-color;
+    height: 0.13rem;
+    background-color: $main-color;
+    margin: 0;
+    border: none;
+
+    &--large {
+        width: 5rem;
+        height: 0.2rem;
+        background-color: $main-color;
+    }
+}

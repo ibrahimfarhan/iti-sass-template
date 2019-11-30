@@ -1,0 +1,39 @@
+.clients-section {
+
+    padding: 3rem;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        position: relative;
+        width: 29rem;
+        height: 39rem;
+        background-image: url("../images/clients_background.jpg");
+        background-size: cover;
+
+        &::after {
+            content: "";
+            height: 5rem;
+            width: 5rem;
+            background-color:
+            #E9204F;
+            position: absolute;
+            right: -1rem;
+            bottom: -1rem;
+            z-index: -1;
+        }
+    }
+
+    &__hr {
+        margin-top: 5rem;
+        width: 90%;
+        color: gainsboro;
+    }
+
+    &__logos {
+        margin: 3rem;
+    }
+}

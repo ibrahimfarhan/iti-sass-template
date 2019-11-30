@@ -1,0 +1,18 @@
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+    @include color-bg-color($main-font-color, $black);
+    align-items: center;
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    &__sm-icons {
+        height: max-content;
+        width: max-content;
+        display: flex;
+        justify-content: space-between;
+    }
+}
