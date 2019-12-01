@@ -29,10 +29,14 @@ body {
   border: solid 0.2rem #E9204F;
   width: max-content;
   color: white;
-  background: linear-gradient(to right, #E9204F 50%, black 50%);
+  background: linear-gradient(to right, #E9204F 50%, #131313 50%);
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s cubic-bezier(0.17, 0.67, 0, 1.01); }
+  .fillable-btn--transparent {
+    background: linear-gradient(to right, #E9204F 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom; }
   .fillable-btn--light {
     background: linear-gradient(to right, #E9204F 50%, #f1f1f1 50%);
     background-size: 200% 100%;
@@ -68,7 +72,7 @@ body {
     color: gray;
     background-color: #f1f1f1; }
     .text-container--light .text-container__title {
-      color: #242323; }
+      color: #131313; }
   .text-container--transparent {
     color: gray;
     background-color: transparent; }
@@ -83,7 +87,7 @@ body {
       color: #E9204F;
       margin-top: 0.6rem; }
     .text-container--quote__name {
-      color: #242323; }
+      color: #131313; }
     .text-container--quote .text-container__text {
       font-size: 1.3rem;
       margin-top: 3rem;
@@ -92,7 +96,7 @@ body {
       font-size: 2.5rem; }
   .text-container--dark {
     color: white;
-    background-color: #242323; }
+    background-color: #131313; }
   .text-container--with-top-hr__top-hr {
     color: #E9204F;
     width: 2rem;
@@ -126,7 +130,7 @@ body {
   background-color: #f1f1f1; }
 
 .section-separator--half-black {
-  background: linear-gradient(to bottom, #f1f1f1 50%, #242323 50%); }
+  background: linear-gradient(to bottom, #f1f1f1 50%, #131313 50%); }
 
 .card {
   height: max-content;
@@ -134,7 +138,7 @@ body {
   max-width: 15rem;
   min-width: 20rem;
   min-height: 22rem;
-  background-color: #242323;
+  background-color: #131313;
   transition: background-color 0.3s linear;
   color: white;
   padding: 1rem 2rem; }
@@ -272,7 +276,7 @@ body {
     color: white;
     background-color: black; }
   .nav-item--light {
-    color: #242323;
+    color: #131313;
     background-color: #f1f1f1; }
   .nav-item--drop-down {
     position: relative;
@@ -352,11 +356,14 @@ body {
   min-height: 3rem;
   width: max-content;
   color: white;
-  background-color: black;
+  background-color: transparent;
+  cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.17, 0.67, 0, 1.01);
   text-align: center;
-  border: solid 0.2rem #E9204F;
+  border: solid 0.15rem #E9204F;
   border-radius: 50%; }
+  .movable-icon::selection {
+    background: none; }
   .movable-icon:hover {
     transform: translateY(-0.3rem); }
   .movable-icon:hover .movable-icon__icon {
@@ -368,8 +375,13 @@ body {
   width: max-content;
   min-width: 2rem;
   color: white;
-  background-color: black;
-  padding: 1rem; }
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.4rem;
+  text-align: center; }
+  .contact-info::selection {
+    background: none; }
   .contact-info:hover {
     color: #E9204F; }
     .contact-info:hover .contact-info__first-line {
@@ -385,7 +397,10 @@ body {
   min-width: 1rem;
   padding: 0.6rem 0.8rem;
   color: white;
-  background-color: black; }
+  background-color: black;
+  cursor: pointer; }
+  .footer-item::selection {
+    background: none; }
   .footer-item:hover {
     color: #E9204F; }
     .footer-item:hover .footer-item__hr {
@@ -545,20 +560,31 @@ body {
     width: 27rem;
     height: 25rem; }
 
-.contact-section {
+.contact-section__row {
   display: flex;
   justify-content: space-between;
   padding: 3rem;
   color: white;
-  background-color: #242323;
+  background-color: #131313;
   align-items: center; }
-  .contact-section__title {
-    font-size: 3rem; }
-  .contact-section__sm-icons {
-    height: max-content;
-    width: max-content;
-    display: flex;
-    justify-content: space-between; }
+  .contact-section__row--second {
+    background-color: #0d0d0d;
+    padding: 3rem 10rem;
+    height: 3rem; }
+
+.contact-section__title {
+  font-size: 3rem; }
+
+.contact-section__sm-icons {
+  height: max-content;
+  width: max-content;
+  display: flex;
+  justify-content: space-between; }
+  .contact-section__sm-icons:last-child {
+    margin-right: 0; }
+
+.contact-section__icon {
+  margin-right: 0.2rem; }
 
 .header {
   width: 100%;
@@ -571,3 +597,17 @@ body {
     margin-left: 3rem; }
   .header__nav-bar {
     margin-top: 1rem; }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background-color: black;
+  height: max-content; }
+  .footer__copyright {
+    font-size: 1rem;
+    color: #e0e0e0; }
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.6rem; }

@@ -1,0 +1,19 @@
+.footer {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: $main-background-color;
+    height: max-content;
+
+    &__copyright {
+        font-size: 1rem;
+        color: $gray;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.6rem;
+    }
+}

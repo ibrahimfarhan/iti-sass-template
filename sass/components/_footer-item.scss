@@ -5,6 +5,7 @@
     min-width: 1rem;
     padding: 0.6rem 0.8rem;
     @include color-bg-color($main-font-color, $main-background-color);
+    @include clickable-div;
 
     &:hover {
         .footer-item__hr {

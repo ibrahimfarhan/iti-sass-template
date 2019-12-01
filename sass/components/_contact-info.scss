@@ -1,8 +1,12 @@
 .contact-info {
     width: max-content;
     min-width: 2rem;
-    @include color-bg-color($main-font-color, $main-background-color);
+    @include color-bg-color($main-font-color, transparent);
+    @include clickable-div;
     padding: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+
     
     &:hover {
         color: $main-color;
