@@ -1,12 +1,15 @@
 .nav-item {
 
-    height: 2.1rem;
-    padding: 1rem;
-    width: max-content;
-    background-color: white;
-    color: black;
-    display: inline-block;
-    @include clickable-div;
+    height: max-content;
+        padding: 1rem;
+        padding-bottom: 0;
+        width: max-content;
+        background-color: white;
+        color: black;
+        display: inline-block;
+        @include clickable-div;
+        width: 100%;
+        height: max-content;
 
     &--dark {
         @include color-bg-color($main-font-color, $main-background-color);
@@ -20,16 +23,21 @@
         position: relative;
         z-index: 2;
 
-        &__list {
-            position: absolute;
-            visibility: hidden;
-            background-color: $main-background-color;
+        &:hover {
+            .nav-item--drop-down__list-container {
+                display: block;
+            }
         }
 
-        &:hover {
-            .nav-item--drop-down__list {
-                visibility: visible;
-            }
+        &__list-container {
+            position: absolute;
+            display: none;
+            background-color: $main-background-color;
+            width: max-content;
+        }
+
+        &__list {
+            margin-top: 1rem;
         }
     }
 
@@ -46,12 +54,13 @@
     }
 
     &__hr {
-        width: 0;
+        width: 0rem;
         padding: 0;
+        border-width: 0.1rem;
         color: $white;
         transition: width, color 0.3s, 0.2s linear;
         margin-left: 0;
         margin-bottom: 0;
-        border-width: 0;
+        color: transparent;
     }
 }

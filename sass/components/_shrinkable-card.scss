@@ -16,6 +16,24 @@
         overflow: hidden;
     }
 
+    &__border {
+        width: 0;
+        height: 0;
+        top: 2rem;
+        left: 2rem;
+        background-color: transparent;
+        position: absolute;
+        z-index: 3;
+
+        &--right {
+            transition: height 0.5s ease;
+        }
+
+        &--bottom {
+            transition: width 0.5s ease;
+        }
+    }
+
     &:hover {
         .shrinkable-card__background {
             transform-origin: center;
@@ -31,6 +49,19 @@
             transform: scale(1.2);
             filter: grayscale(0);
             filter: brightness(50%);
+        }
+
+        .shrinkable-card__border {
+            height: 80%;
+            width: 80%;
+        }
+
+        .shrinkable-card__border--right {
+            border-right: 0.1rem solid $main-font-color;
+        }
+
+        .shrinkable-card__border--bottom {
+            border-bottom: 0.1rem solid $main-font-color;
         }
     }
 

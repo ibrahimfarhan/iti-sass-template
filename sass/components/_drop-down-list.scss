@@ -1,9 +1,21 @@
 .drop-down-list {
     list-style: none;
-    padding: 1rem 0.5rem;
     line-height: 2rem;
-    
+    box-shadow: 0 0.1rem 0.5rem 0.02rem gray;
+    padding: 0;
+    width: max-content;
+    max-width: 8rem;
+
+    // &--last-nav-item {
+    //     max-width: 8rem;
+    // }
+
     &__item {
-        width: max-content;
+        margin: 0;
+        padding: 0.3rem 1rem;
+
+        &:hover {
+            background-color: $black;
+        }
     }
 }

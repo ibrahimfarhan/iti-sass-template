@@ -257,19 +257,28 @@ body {
 
 .drop-down-list {
   list-style: none;
-  padding: 1rem 0.5rem;
-  line-height: 2rem; }
+  line-height: 2rem;
+  box-shadow: 0 0.1rem 0.5rem 0.02rem gray;
+  padding: 0;
+  width: max-content;
+  max-width: 8rem; }
   .drop-down-list__item {
-    width: max-content; }
+    margin: 0;
+    padding: 0.3rem 1rem; }
+    .drop-down-list__item:hover {
+      background-color: #131313; }
 
 .nav-item {
-  height: 2.1rem;
+  height: max-content;
   padding: 1rem;
+  padding-bottom: 0;
   width: max-content;
   background-color: white;
   color: black;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%;
+  height: max-content; }
   .nav-item::selection {
     background: none; }
   .nav-item--dark {
@@ -281,12 +290,15 @@ body {
   .nav-item--drop-down {
     position: relative;
     z-index: 2; }
-    .nav-item--drop-down__list {
+    .nav-item--drop-down:hover .nav-item--drop-down__list-container {
+      display: block; }
+    .nav-item--drop-down__list-container {
       position: absolute;
-      visibility: hidden;
-      background-color: black; }
-    .nav-item--drop-down:hover .nav-item--drop-down__list {
-      visibility: visible; }
+      display: none;
+      background-color: black;
+      width: max-content; }
+    .nav-item--drop-down__list {
+      margin-top: 1rem; }
   .nav-item:hover .nav-item__hr {
     width: 1rem;
     border-width: 0.1rem;
@@ -294,13 +306,14 @@ body {
   .nav-item__text {
     margin-bottom: 0.3rem; }
   .nav-item__hr {
-    width: 0;
+    width: 0rem;
     padding: 0;
+    border-width: 0.1rem;
     color: #f1f1f1;
     transition: width, color 0.3s, 0.2s linear;
     margin-left: 0;
     margin-bottom: 0;
-    border-width: 0; }
+    color: transparent; }
 
 .shrinkable-card {
   position: relative;
@@ -321,6 +334,18 @@ body {
     height: 100%;
     transition: transform 0.6s cubic-bezier(0.17, 0.67, 0, 1.01);
     overflow: hidden; }
+  .shrinkable-card__border {
+    width: 0;
+    height: 0;
+    top: 2rem;
+    left: 2rem;
+    background-color: transparent;
+    position: absolute;
+    z-index: 3; }
+    .shrinkable-card__border--right {
+      transition: height 0.5s ease; }
+    .shrinkable-card__border--bottom {
+      transition: width 0.5s ease; }
   .shrinkable-card:hover .shrinkable-card__background {
     transform-origin: center;
     transform: scale(0.95); }
@@ -331,6 +356,13 @@ body {
     transform: scale(1.2);
     filter: grayscale(0);
     filter: brightness(50%); }
+  .shrinkable-card:hover .shrinkable-card__border {
+    height: 80%;
+    width: 80%; }
+  .shrinkable-card:hover .shrinkable-card__border--right {
+    border-right: 0.1rem solid white; }
+  .shrinkable-card:hover .shrinkable-card__border--bottom {
+    border-bottom: 0.1rem solid white; }
   .shrinkable-card__text {
     position: absolute;
     top: 50%;
@@ -434,6 +466,17 @@ body {
   color: #E9204F;
   margin: 0; }
 
+.scalable-icon {
+  transition: transform 0.6s cubic-bezier(0.17, 0.67, 0, 1.01); }
+  .scalable-icon:hover {
+    transform: scale(1.3);
+    transform: translateY(-0.5rem); }
+
+.rotating-icon {
+  transition: transform 0.4s linear; }
+  .rotating-icon:hover {
+    transform: rotate(360deg); }
+
 .main-section {
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
@@ -522,6 +565,10 @@ body {
 
 .clients-section {
   padding: 3rem; }
+  .clients-section__logo {
+    filter: opacity(50%); }
+    .clients-section__logo:hover {
+      filter: opacity(100%); }
   .clients-section__row {
     display: flex;
     justify-content: space-between; }
