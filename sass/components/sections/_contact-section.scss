@@ -3,6 +3,7 @@
     &__row {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 3rem;
         @include color-bg-color($main-font-color, $black);
         align-items: center;
@@ -11,7 +12,8 @@
             
             background-color: $darker-black;
             padding: 3rem 10rem;
-            height: 3rem;
+            min-height: 3rem;
+            height: max-content;
         }
     }
 

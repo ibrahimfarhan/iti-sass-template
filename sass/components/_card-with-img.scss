@@ -5,11 +5,13 @@
     overflow: hidden;
 
     &--large {
-        width: $card-width-large;
-        height: $card-height-large;
+        max-width: $card-width-large;
+        max-height: $card-height-large;
+        height: max-content;
+        width: max-content;
 
         .card-with-img__text {
-            top: 75%;
+            top: 60%;
         }
     }
 

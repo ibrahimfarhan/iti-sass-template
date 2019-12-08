@@ -19,4 +19,10 @@
     &__btn {
         height: 2rem;
     }
+
+    @include media(tablet-portrait) {
+        &__shrinkable-card {
+            margin-bottom: 1rem;
+        }
+    }
 }

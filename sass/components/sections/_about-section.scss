@@ -5,6 +5,7 @@
     &__row {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__images {
@@ -16,6 +17,7 @@
     &__paragraph {
         max-width: 50rem;
         color: gray;
+        margin-left: 2rem;
     }
 
     &__right-images {
@@ -26,5 +28,13 @@
 
     &__text {
         margin-top: 3rem;
+    }
+    
+    @include media(tablet-portrait) {
+        &__card-with-img {
+            max-width: $card-width;
+            height: max-content;
+            margin-bottom: 1rem;
+        }
     }
 }

@@ -8,11 +8,14 @@
         &:hover {
             filter: opacity(100%);
         }
+
+        margin: 1rem;
     }
 
     &__row {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__img {

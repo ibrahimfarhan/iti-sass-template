@@ -39,20 +39,11 @@
         flex-wrap: wrap;
         overflow: hidden;
         justify-content: space-between;
+    }
 
-        // &:last-child {
-        //     position: relative;
-        //     overflow: visible;
-        //     &::after {
-        //         content: "";
-        //         height: 5rem;
-        //         width: 5rem;
-        //         background-color:#E9204F;
-        //         position: absolute;
-        //         right: -1rem;
-        //         bottom: -1rem;
-        //         z-index: -1;
-        //     }
-        // }
+    @include media(desktop) {
+        .card {
+            margin-bottom: 1rem;
+        }
     }
 }

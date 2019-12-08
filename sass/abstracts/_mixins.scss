@@ -25,3 +25,30 @@
     color: $c;
     background-color: $bg-color;
 }
+
+@mixin media($device-type) {
+
+    @if $device-type == phone {
+        @media (max-width: #{to-em(480)}em) {
+            @content
+        }
+    };
+
+    @if $device-type == tablet {
+        @media (max-width: #{to-em(678)}em) {
+            @content
+        }
+    };
+
+    @if $device-type == tablet-portrait {
+        @media (max-width: #{to-em(960)}em) {
+            @content
+        }
+    };
+
+    @if $device-type == desktop {
+        @media (max-width: #{to-em(1250)}em) {
+            @content
+        }
+    };
+}
